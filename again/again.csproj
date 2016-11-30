@@ -159,13 +159,32 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\DailiesController.cs" />
+    <Compile Include="Controllers\DaysController.cs" />
+    <Compile Include="Controllers\DepartmentsController.cs" />
+    <Compile Include="Controllers\EmployersController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\PositionsController.cs" />
     <Compile Include="Controllers\RolesAdminController.cs" />
     <Compile Include="Controllers\UserAdminController.cs" />
+    <Compile Include="Controllers\WorksController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201611261620002_initial.cs" />
+    <Compile Include="Migrations\201611261620002_initial.Designer.cs">
+      <DependentUpon>201611261620002_initial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201611280957519_require.cs" />
+    <Compile Include="Migrations\201611280957519_require.Designer.cs">
+      <DependentUpon>201611280957519_require.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201611281127338_controllers.cs" />
+    <Compile Include="Migrations\201611281127338_controllers.Designer.cs">
+      <DependentUpon>201611281127338_controllers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\AdminViewModel.cs" />
     <Compile Include="Models\Daily.cs" />
@@ -174,8 +193,11 @@
     <Compile Include="Models\Employer.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\Work.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
+    <Compile Include="ViewModels\DepartmentPositionViewModel.cs" />
+    <Compile Include="ViewModels\GeneralViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
@@ -244,6 +266,36 @@
     <Content Include="Views\RolesAdmin\Delete.cshtml" />
     <Content Include="Views\RolesAdmin\Create.cshtml" />
     <Content Include="Views\Account\DisplayEmail.cshtml" />
+    <Content Include="Views\Employers\Create.cshtml" />
+    <Content Include="Views\Employers\Delete.cshtml" />
+    <Content Include="Views\Employers\Details.cshtml" />
+    <Content Include="Views\Employers\Edit.cshtml" />
+    <Content Include="Views\Employers\Index.cshtml" />
+    <Content Include="Views\Positions\Create.cshtml" />
+    <Content Include="Views\Positions\Delete.cshtml" />
+    <Content Include="Views\Positions\Details.cshtml" />
+    <Content Include="Views\Positions\Edit.cshtml" />
+    <Content Include="Views\Positions\Index.cshtml" />
+    <Content Include="Views\Departments\Create.cshtml" />
+    <Content Include="Views\Departments\Delete.cshtml" />
+    <Content Include="Views\Departments\Details.cshtml" />
+    <Content Include="Views\Departments\Edit.cshtml" />
+    <Content Include="Views\Departments\Index.cshtml" />
+    <Content Include="Views\Days\Create.cshtml" />
+    <Content Include="Views\Days\Delete.cshtml" />
+    <Content Include="Views\Days\Details.cshtml" />
+    <Content Include="Views\Days\Edit.cshtml" />
+    <Content Include="Views\Days\Index.cshtml" />
+    <Content Include="Views\Dailies\Create.cshtml" />
+    <Content Include="Views\Dailies\Delete.cshtml" />
+    <Content Include="Views\Dailies\Details.cshtml" />
+    <Content Include="Views\Dailies\Edit.cshtml" />
+    <Content Include="Views\Dailies\Index.cshtml" />
+    <Content Include="Views\Works\Create.cshtml" />
+    <Content Include="Views\Works\Delete.cshtml" />
+    <Content Include="Views\Works\Details.cshtml" />
+    <Content Include="Views\Works\Edit.cshtml" />
+    <Content Include="Views\Works\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -254,6 +306,17 @@
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201611261620002_initial.resx">
+      <DependentUpon>201611261620002_initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201611280957519_require.resx">
+      <DependentUpon>201611280957519_require.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201611281127338_controllers.resx">
+      <DependentUpon>201611281127338_controllers.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

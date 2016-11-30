@@ -26,6 +26,5 @@ namespace again.Models
         public Department Department { get; set; }
 
         public ICollection<Employer> Employers { get; set; }
-
     }
 }

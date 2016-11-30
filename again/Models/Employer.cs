@@ -9,30 +9,52 @@ namespace again.Models
     public class Employer
     {
         public int Id { get; set; }
+
+        [Required]
+        [Display(Name = "Imie")]
         public string FirstName { get; set; }
+
+        [Required]
+        [Display(Name = "Nazwisko")]
         public string LastName { get; set; }
+
+        [Display(Name = "Telefon")]
+        [RegularExpression("^\\d{3}-\\d{3}-\\d{3}$",ErrorMessage = "Wprowadź telefon w formie XXX-XXX-XXX")]
         public string Phone { get; set; }
+
+        [Display(Name = "Nagana")]
         public bool Reprimand { get; set; }
 
-        
+        [Display(Name = "Pesel")]
+        [RegularExpression("^\\d{10}$", ErrorMessage = "Wprowadź telefon w formie XXX-XXX-XXX")]
         public string Pesel { get; set; }
 
+        [Display(Name = "Seopień niepełnosprawności",ShortName = "Niepełnosprawność")]
         public DisabilityLevel DisabilityLevel { get; set; }
 
-
+        [Required]
+        [Display(Name = "Status zdrowia")]
         public HealthStatus HealthStatus {get;set;}
 
+        [Display(Name = "Uwagi")]
         public string AdditionalInformation { get; set; }
 
+        [Display(Name = "Dniówka")]
         public ICollection<Daily> Dailys { get; set; }
 
+        [Required]
+        [Display(Name = "Zainteresowania")]
         public string Interestings { get; set; }
 
+        [Display(Name = "Stanowisko")]
         public Position Position { get; set;  }
 
+        [Display(Name = "Dzień")]
         public ICollection<Day> Days { get; set; }
 
+        [Display(Name = "Godziny pracy")]
         public ICollection<Work> Works { get; set; }
+
 
         public double GetMonthlyRate()
         {
@@ -56,6 +78,8 @@ namespace again.Models
 
             return value;
         }
+
+        
     }
 
     public enum HealthStatus
@@ -72,17 +96,5 @@ namespace again.Models
         ZNACZNY = 0, LEKKI = 1, UMIARKOWANY = 3
     }
 
-    public class Work
-    {
-        public int Id { get; set; }
-        public DateTime Start { get; set; }
-        public DateTime End { get; set; }
-
-        public Day Day { get; set; }
-
-        public double GetHours()
-        {
-            return (End - Start).Hours;
-        }
-    }
+    
 }

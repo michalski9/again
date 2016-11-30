@@ -1,0 +1,90 @@
+﻿@model again.Models.Employer
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Employer</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.FirstName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FirstName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LastName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LastName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Phone)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Phone)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Reprimand)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Reprimand)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Pesel)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Pesel)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DisabilityLevel)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DisabilityLevel)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HealthStatus)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HealthStatus)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AdditionalInformation)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AdditionalInformation)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Interestings)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Interestings)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
